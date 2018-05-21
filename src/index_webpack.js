@@ -1,5 +1,5 @@
 // trick to bundle the css
-require('./../css/msa.css');
+require('./msa.css');
 import * as MSA from './index';
 const msa = MSA.default;
 // workaround against es6 exports
