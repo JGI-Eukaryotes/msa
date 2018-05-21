@@ -1,5 +1,5 @@
 {
-  "name": "msa",
+  "name": "zome-msa",
   "description": "Display multiple sequences",
   "version": "0.0.0",
   "homepage": "http://github.com/wilzbach/msa",
@@ -22,7 +22,11 @@
       "name": "Guy Yachdav",
       "email": "yachdav@rostlab.org",
       "url": "https://www.linkedin.com/in/gyachdav"
-    }
+  },
+  {
+      "name": "Patrick Davidson",
+      "email": "padavidson@lbl.gov"
+  }
   ],
   "author": "Sebastian Wilzbach <sebi.wilzbach@gmail.com>",
   "dependencies": {
@@ -46,62 +50,23 @@
     "xhr": "^2.2.0"
   },
   "devDependencies": {
-    "babel-cli": "^6.8.0",
-    "babel-core": "^6.8.0",
-    "babel-loader": "^6.2.4",
-    "babel-plugin-transform-export-extensions": "^6.8.0",
-    "babel-preset-es2015": "^6.3.13",
-    "css-loader": "^0.23.1",
+    "ajv": "^6.5.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.7.0",
+    "css-loader": "^0.28.11",
     "d3-scale": "^0.7.0",
     "mkdirp-then": "^1.1.1",
-    "strip-loader": "^0.1.2",
-    "style-loader": "^0.13.0",
+    "style-loader": "^0.21.0",
     "through2": "^0.6.3",
-    "uglify-js": "~2.6.2",
-    "webpack": "^1.13.0"
+    "webpack": "^4.8.3",
+    "webpack-dev-server": "^3.1.4"
   },
-  "keywords": [
-    "bio",
-    "biological",
-    "biojs",
-    "galaxy-vis",
-    "msa",
-    "multiple",
-    "sequence",
-    "alignment",
-    "fasta",
-    "clustal"
-  ],
-  "main": "lib/index.js",
+  "optionalDependencies": {
+    "fsevents": "*"
+  },
   "scripts": {
-    "prepublish": "node ./node_modules/webpack/bin/webpack.js -p && gulp build && babel -d lib src",
-    "build": "node ./node_modules/webpack/bin/webpack.js -p && gulp build"
+    "start": "NODE_ENV=development node ./dev/server"
   },
-  "license": "BSL-1.0",
-  "biojs": {
-    "registryHeight": "400",
-    "screenshot": "screenshot.png",
-    "logo": "/logo.png",
-    "eventInstance": "m.g"
-  },
-  "sniper": {
-    "noBrowserify": true,
-    "buildJS": [
-      "https://cdn.bio.sh/msa/latest/msa.min.gz.js"
-    ],
-    "js": [
-      "dist/msa.js"
-    ],
-    "snippets": [
-      "snippets"
-    ],
-    "first": "fer1"
-  },
-  "galaxy": {
-    "datatypes": [
-      "sequence.Fasta",
-      "sequences",
-      "msa.clustal"
-    ]
-  }
+  "license": "BSL-1.0"
 }
