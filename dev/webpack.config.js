@@ -26,7 +26,7 @@ module.exports = {
     resolve: {
       extensions: ['.js', '.css'],
       alias: {
-        "bio.io": '../node_modules/bio.io/src/index'
+        'bio.io': path.join(ROOT_DIR, '/node_modules/bio.io/src/index')
       }
     },
 };
