@@ -5,7 +5,6 @@ import SeqCollection from "./model/SeqCollection";
 import Colorator from "./g/colorscheme";
 import Columns from "./g/columns";
 import Config from "./g/config";
-import Package from "./g/package";
 import SelCol from "./g/selection/SelectionCol";
 import User from "./g/user";
 import Visibility from "./g/visibility";
@@ -27,7 +26,6 @@ const Stats = require("stat.seqs");
 // utils
 const $ = require("jbone");
 import FileHelper from "./utils/file";
-import TreeHelper from "./utils/tree";
 import ProxyHelper from "./utils/proxy";
 
 // opts is a dictionary consisting of
@@ -59,7 +57,6 @@ const MSA = boneView.extend({
 
     // populate it and init the global models
     this.g.config = new Config(data.conf);
-    this.g.package = new Package(this.g);
     this.g.selcol = new SelCol([],{g:this.g});
     this.g.user = new User();
     this.g.vis = new Visibility(data.vis, {model: this.seqs});
@@ -82,7 +79,6 @@ const MSA = boneView.extend({
     this.u = {};
     this.u.file = new FileHelper(this);
     this.u.proxy = new ProxyHelper({g: this.g});
-    this.u.tree = new TreeHelper(this);
 
     if (this.g.config.get("eventBus") === true) {
       this.startEventBus();
