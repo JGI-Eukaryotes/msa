@@ -22,18 +22,18 @@
       "name": "Guy Yachdav",
       "email": "yachdav@rostlab.org",
       "url": "https://www.linkedin.com/in/gyachdav"
-  },
-  {
+    },
+    {
       "name": "Patrick Davidson",
       "email": "padavidson@lbl.gov"
-  }
+    }
   ],
   "author": "Sebastian Wilzbach <sebi.wilzbach@gmail.com>",
   "dependencies": {
     "backbone-childs": "^1.0.3",
     "backbone-thin": "^1.0.8",
     "backbone-viewj": "^1.0.1",
-    "bio.io": "https://github.com/wilzbach/bio.io.git#233c569a000b4e481bc682dc1c5024aaa8f4c3b6",
+    "bio.io": "^1.0.6",
     "biojs-events": "^0.0.4",
     "biojs-model": "^0.0.2",
     "biojs-vis-seqlogo": "0.0.14",
@@ -57,7 +57,6 @@
     "css-loader": "^0.28.11",
     "d3-scale": "^0.7.0",
     "mkdirp-then": "^1.1.1",
-    "style-loader": "^0.21.0",
     "through2": "^0.6.3",
     "webpack": "^4.8.3",
     "webpack-dev-server": "^3.1.4"
