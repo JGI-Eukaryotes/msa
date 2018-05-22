@@ -27,4 +27,4 @@ export const io = {
 export { MSA as msa }
 export default MSAWrapper
 
-if (process.env.NODE_ENV === 'development' ) window.msa = MSA
+if (process.env.USE_WINDOW_DOT_MSA) window.msa = MSA
