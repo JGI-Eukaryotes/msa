@@ -4,7 +4,7 @@ node_modules
 coverage
 tmp
 test
-#src
+src
 dist
 snippets
 res-doc
