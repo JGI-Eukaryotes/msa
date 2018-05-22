@@ -29,4 +29,10 @@ module.exports = {
         'bio.io': path.join(ROOT_DIR, '/node_modules/bio.io/src/index.js')
       }
     },
+    node: {
+        console: true,
+        fs: 'empty',
+        net: 'empty',
+        tls: 'empty'
+    }
 };
