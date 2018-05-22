@@ -68,7 +68,7 @@
   },
   "scripts": {
     "start": "webpack-dev-server --mode development --watch --config ./webpack.config.js",
-    "build": "babel src --out-dir lib --presets=env"
+    "build": "babel src --out-dir lib --copy-files --presets=env"
   },
   "license": "BSL-1.0",
   "main": "./lib"
