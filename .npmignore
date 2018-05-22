@@ -1,8 +1,10 @@
 node_modules
 .DS_Store
+.git
 coverage
 tmp
 test
-src
+#src
+dist
 snippets
 res-doc
