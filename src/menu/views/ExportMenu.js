@@ -1,7 +1,7 @@
 import MenuBuilder from "../menubuilder";
 import Exporter from "../../utils/exporter";
 
-import {fasta} from "bio.io";
+import {fasta} from "zome-bio-io";
 
 const FastaExporter = fasta.write;
 

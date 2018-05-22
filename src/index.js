@@ -1,4 +1,4 @@
-import { fasta, clustal, gff } from 'bio.io'
+import { fasta, clustal, gff } from 'zome-bio-io'
 import MSA from './msa'
 import './msa.css'
 
