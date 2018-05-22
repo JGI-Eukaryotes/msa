@@ -61,3 +61,10 @@ export {Selection as sel};
 export {PosSelection as possel};
 export {RowSelection as rowsel};
 export {ColumnSelection as columnsel};
+
+export const selection = {
+    sel: Selection,
+    possel: PosSelection,
+    rowsel: RowSelection,
+    columnsel: ColumnSelection
+}

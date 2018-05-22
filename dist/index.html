@@ -5,7 +5,7 @@
     <meta name="description" content="Simple BioJS example" />
 
     <!-- include MSA js + css -->
-    <script src="./dist/msa.js"></script>
+    <script src="./main.js"></script>
 </head>
 
 <body>
@@ -24,9 +24,6 @@
 		    <div id="yourDiv">Loading ... </div>
 
 		    <script>
-		        // this is a way how you use a bundled file parser
-		        //msa = require("msa");
-				//msa = window.msa;
 
 		        var opts = {};
 
@@ -47,7 +44,7 @@
 		        };
 
 		        // init msa
-		        var m = new msa(opts);
+		        var m = new window.msa(opts);
 
 		        var defaultURL = "./snippets/data/fer1.clustal";
 		  		function getURLParameter(name) {
