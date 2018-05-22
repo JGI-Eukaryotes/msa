@@ -51,6 +51,7 @@
   },
   "devDependencies": {
     "ajv": "^6.5.0",
+    "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.4",
     "babel-preset-env": "^1.7.0",
@@ -67,7 +68,8 @@
   },
   "scripts": {
     "start": "webpack-dev-server --mode development --watch --config ./webpack.config.js",
-    "build": "webpack --mode production --config ./webpack.config.js"
+    "build": "babel src --out-dir lib --presets=env"
   },
-  "license": "BSL-1.0"
+  "license": "BSL-1.0",
+  "main": "./lib"
 }

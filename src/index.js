@@ -11,6 +11,7 @@ const MSAWrapper = function() {
 }
 
 export { model } from './model'
+import { menu } from './menu'
 export { menu } from './menu'
 export { utils } from './utils'
 export { selection } from  './g/selection/Selection'
@@ -27,4 +28,7 @@ export const io = {
 export { MSA as msa }
 export default MSAWrapper
 
-if (process.env.NODE_ENV === 'development') window.msa = MSA
+if (process.env.NODE_ENV === 'development') {
+    window.msa = MSA
+    window.msa.menu = menu
+}

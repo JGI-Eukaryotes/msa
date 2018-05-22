@@ -2,11 +2,11 @@ node_modules
 .DS_Store
 coverage
 tmp
-test/all_test.js
-test/perf/all.js
+#test/all_test.js
+#test/perf/all.js
 .sass-cache
 build
-lib
+# lib
 bower_components/
 .bundle
 .gems
