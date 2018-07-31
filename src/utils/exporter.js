@@ -60,10 +60,19 @@ const Exporter =
     }
   },
 
-  saveAsFile: function(that,name) {
+  saveOriginalAsFile: function saveOriginalAsFile(that, name) {
     // limit at about 256k
-    const text = Fasta.write(that.seqs.toJSON());
-    const blob = new Blob([text], {type : 'text/plain'});
+    var text = _zomeBioIo.fasta.write(that.seqs.toJSON());
+    var blob = new Blob([text], { type: 'text/plain' });
+    return saveAs(blob, name);
+  },
+
+  saveAsFile: function saveAsFile(that, name) {
+    // limit at about 256k
+    var inView = that.g.seqs.models.filter( model => !model.changed.hidden )
+                                   .map( model => model.attributes )
+    var text = _zomeBioIo.fasta.write(inView);
+    var blob = new Blob([text], { type: 'text/plain' });
     return saveAs(blob, name);
   },
 
